@@ -3,6 +3,7 @@ import google.generativeai as genai
 import os
 import random
 
+api_key = os.environ.get("GEMINI_API_KEY")
 # Configure Streamlit page
 st.set_page_config(page_title="The Bridge", page_icon="🌉", layout="centered")
 
