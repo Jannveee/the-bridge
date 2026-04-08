@@ -3,7 +3,6 @@ import google.generativeai as genai
 import os
 import random
 
-api_key = os.environ.get("GEMINI_API_KEY")
 # Configure Streamlit page
 st.set_page_config(page_title="The Bridge", page_icon="🌉", layout="centered")
 
@@ -88,7 +87,7 @@ api_key = os.environ.get("GEMINI_API_KEY")
 st.title("🌉 The Bridge")
 st.subheader("A Social Conflict Resolver")
 
-api_key = st.secrets.get("GEMINI_API_KEY")
+api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
     st.error("⚠️ GEMINI_API_KEY environment variable not found.")
     st.stop()
