@@ -87,8 +87,9 @@ api_key = os.environ.get("GEMINI_API_KEY")
 st.title("🌉 The Bridge")
 st.subheader("A Social Conflict Resolver")
 
+api_key = st.secrets.get("GEMINI_API_KEY")
 if not api_key:
-    st.error("⚠️ GEMINI_API_KEY environment variable not found. Please set it in your terminal to use the app.")
+    st.error("⚠️ GEMINI_API_KEY environment variable not found.")
     st.stop()
 
 genai.configure(api_key=api_key)
